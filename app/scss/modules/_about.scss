@@ -1,0 +1,95 @@
+.about {
+	background-color: #ebebeb;
+	
+
+	&__wrapper {
+		display: flex;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		padding-top: 125px;
+		
+		@media (max-width: $width-md) {
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		    
+	}
+		 
+		
+	}
+	
+	
+	&__photo {
+		text-align: center;
+		background: rgba(154, 159, 207, .5) url('../images/about.jpg') no-repeat top center;
+		background-blend-mode: darken;
+		background-size: cover;
+		width: 31.5%;
+		height: 555px;
+		margin-bottom: 60px;
+
+		@media (max-width: $width-md) {
+			width: 100%;
+			height: 250px;
+		}
+	}
+
+	&__img {
+		margin-top: 75px;
+		margin-bottom: 45px;
+
+	}
+
+	&__title {
+		font-family: $proximasemi;
+		font-size: 36px;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: $white;
+	}
+
+	&__desc {
+		color: #665f60;
+		width: 53.5%;
+		display: flex;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		
+		@media (max-width: $width-md) {
+			width: 100%;
+		}
+	}
+	&__text {
+		font-size: 20px;
+		margin-bottom: 32px;
+	}
+	&__button {
+		margin-top: 63px;
+		cursor: pointer;
+		border: 1px solid black;
+		padding: 0 50px;
+		line-height: 50px;
+		font-size: 20px;
+		font-style: italic;
+		-webkit-align-self: center;
+		        align-self: center;
+		transition: all .3s;
+		
+		@media (max-width: $width-md) {
+			margin-top: 10px;
+			margin-bottom: 15px;
+		}
+		
+		&:hover {
+			transform: scale(1.03);
+		}
+
+
+		&::focus {
+			transform: scale (.9);
+		}
+	}
+}

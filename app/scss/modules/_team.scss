@@ -1,0 +1,83 @@
+.team {
+	position: relative;
+	background: #ebebeb;
+	&__icon {
+		text-align: center;
+		padding-top: 55px;
+	}
+
+	&__title {
+		font-family: $proximasemi;
+		font-size: 36px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-top: 30px;
+		margin-bottom: 65px;
+		text-align: center;
+		color: $font;
+	}
+}
+
+.person {
+	margin-top: 140px;
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background: #FFF;
+	margin-right: 30px;
+	height: 300px;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-justify-content: flex-end;
+	        justify-content: flex-end;
+	position: relative;
+	
+	&__photo {
+		border: 12px solid #EBEBEB;
+		border-radius: 50%;
+		z-index: 999;
+		@include pos($l:11.5%, $t:-140px);
+		
+		@media (max-width: $width-md) {
+			@include pos($l:6.5%, $t:-140px);
+		}
+	}
+	&__name {
+		font-family: $proximabold;
+		font-size: 24px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #a5a1d2;
+		margin-bottom: 35px;
+	}
+	&__prof {
+		font-style: italic;
+		font-size: 24px;
+		margin-bottom: 50px;
+	}
+
+	&__socialize {
+		background: #9f9acf;
+		display: flex;
+		margin-right: 30px;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		margin-bottom: 100px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		img {
+			padding-left: 12px;
+		}
+	}
+}
+
+
+.next {
+	@include pos($t:300px, $r:-30px);
+}
+
+.prev {
+	transform: rotateY(180deg);
+	@include pos($t:300px, $l:-60px);
+}
